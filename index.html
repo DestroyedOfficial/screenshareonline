@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Képernyőmegosztás Online</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Képernyőmegosztás Online</h1>
+        <div class="button-container">
+            <button id="shareScreen">Képernyő megosztása</button>
+            <button id="watchScreen">Megosztás nézése</button>
+        </div>
+        <div id="codeDisplay" class="hidden">
+            <p>A Te megosztó kódod: <span id="shareCode"></span></p>
+        </div>
+        <div id="codeInput" class="hidden">
+            <div class="control-buttons">
+                <input type="text" id="watchCode" placeholder="Enter sharing code">
+                <button id="connectButton">Csatlakozás</button>
+                <button id="fullscreenButton" class="hidden">Teljesképernyő</button>
+            </div>
+        </div>
+        <div id="videoContainer" class="hidden">
+            <video id="screenVideo" class="hidden" autoplay></video>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
